@@ -53,7 +53,7 @@ function initFromInvp(){
 
 
 function initMusic(){
-	console.log("initMusic")
+	console.log("initMusic:") 
 	var musicPlay = $("#musicPlay");
 	var audio = $("#show_audio");
 
@@ -107,17 +107,25 @@ function initMusic(){
 				"	</div>"+
 				"</div>");
 	}else{
+
+
+		initMusicByHo(musicPlay,audio);
+		return ;
 		var isWechat = theAgent.toLowerCase().indexOf('micromessenger') != -1;
 		if(!isWechat){
+			console.log("!isWechat:")
 			initMusicByHo(musicPlay,audio);
 		}else{
 			if(theAgent.indexOf("ndroid")>-1){
+				console.log("android: initMusicByHo")
 				document.addEventListener("WeixinJSBridgeReady",function onBridgeReady(){
 					initMusicByHo(musicPlay,audio);
 				});
 			}else if(theAgent.toLowerCase().indexOf('windowswechat')!=-1){
+				console.log("windowswechat: initMusicByWXJSB")
 				initMusicByWXJSB(musicPlay,audio);
 			}else{
+				console.log("其他如 ios: initMusicByWXJSB")
 				document.addEventListener("WeixinJSBridgeReady",function onBridgeReady(){
 					initMusicByWXJSB(musicPlay,audio);
 				});
