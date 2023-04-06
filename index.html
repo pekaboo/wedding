@@ -13,6 +13,7 @@
     <script type="text/javascript" src="/assets/jquery.min.js?0.7724094842118052"></script>
     <!-- <script type='text/javascript' src='https://res.wx.qq.com/open/js/jweixin-1.6.0.js'></script> -->
     <!-- <script id="wxconfig" type='text/javascript'></script> -->
+    
     <script type="text/javascript">
         var pageSpriteList = new Array();
         //init basic param
@@ -88,22 +89,22 @@
                 }
             }
             if (badv) {
-                var html = "<img id='badv' onclick=\"location.href='https://www.hunlihu.com/atoapp.jsp'\" style='z-index:13145211;width:35px;position:fixed;top:150px;right:-100;' src='https://s.hunlihu.com/static/krsi82iwksi.png'/>";
-                $('body').prepend(html);
-                $('#badv').delay(1000).animate({ right: '0px' }, 500);
+                //var html = "<img id='badv' onclick=\"location.href='https://www.hunlihu.com/atoapp.jsp'\" style='z-index:13145211;width:35px;position:fixed;top:150px;right:-100;' src='https://s.hunlihu.com/static/krsi82iwksi.png'/>";
+                //$('body').prepend(html);
+                //$('#badv').delay(1000).animate({ right: '0px' }, 500);
             }
             if (is_snapshotuser) {
-                var curl = location.href.replace('is_snapshotuser=1', 'z=1').replaceAll('&', '__');
-                var url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx290967200869ac7c&redirect_uri=https://h5.hunlihu.com/wxinterface/outapi/outapi/getFootMarkForInv?tempcode=" + curl + "&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect"
-                var html = "<div id='is_snapshotuser' style='z-index:13145209;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);'>" +
-                    "<div style='width:80%;background:white;margin:280px 10% 0 10%;padding:30px 10px;border-radius:8px;' align='center'>" +
-                    "<div style='font-size:18px;font-weight:bold;height:40px;line-height:40px;'>温馨提示</div>" +
-                    "<div style='height:40px;line-height:40px;font-size:16px;color:#666;'>授权后即可查看完整内容</div>" +
-                    "<div style='width:200px;height:40px;line-height:40px;background:#F396A1;color:white;border-radius:30px;' onclick=\"location.replace('" + url + "')\">继续查看</div>" +
-                    "<div style='height:35px;line-height:35px;font-size:12px;color:#aaa;' onclick=\"$('#is_snapshotuser').remove();\">取消</div>" +
-                    "</div>" +
-                    "</div>";
-                $('body').prepend(html);
+                //var curl = location.href.replace('is_snapshotuser=1', 'z=1').replaceAll('&', '__');
+                //var url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx290967200869ac7c&redirect_uri=https://h5.hunlihu.com/wxinterface/outapi/outapi/getFootMarkForInv?tempcode=" + curl + "&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect"
+                //var html = "<div id='is_snapshotuser' style='z-index:13145209;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);'>" +
+                //    "<div style='width:80%;background:white;margin:280px 10% 0 10%;padding:30px 10px;border-radius:8px;' align='center'>" +
+                //    "<div style='font-size:18px;font-weight:bold;height:40px;line-height:40px;'>温馨提示</div>" +
+                //    "<div style='height:40px;line-height:40px;font-size:16px;color:#666;'>授权后即可查看完整内容</div>" +
+                //    "<div style='width:200px;height:40px;line-height:40px;background:#F396A1;color:white;border-radius:30px;' onclick=\"location.replace('" + url + "')\">继续查看</div>" +
+                //    "<div style='height:35px;line-height:35px;font-size:12px;color:#aaa;' onclick=\"$('#is_snapshotuser').remove();\">取消</div>" +
+                //    "</div>" +
+                //    "</div>";
+                //$('body').prepend(html);
             }
         });
 
@@ -648,14 +649,14 @@
         .theyuyin {
             width: 25px;
             height: 25px;
-            background-image: url("//s.hunlihu.com/static/jianpank.png");
+            background-image: url("./img/jianpank.png");
             background-size: 100% 100%;
         }
 
         .thejianpan {
             width: 35px;
             height: 35px;
-            background-image: url("//s.hunlihu.com/static/yuyink.png");
+            background-image: url("./img/yuyink.png");
             background-size: 100% 100%;
             display: none;
         }
@@ -772,14 +773,14 @@
 
         @font-face {
             font-family: 'sysfont';
-            src: url('//s.hunlihu.com/css/120.ttf');
+            src: url('./assets/120.ttf');
             font-style: normal;
             font-weight: normal;
         }
 
         @font-face {
             font-family: 'din';
-            src: url('//s.hunlihu.com/css/dinbold.otf');
+            src: url('./assets/dinbold.otf');
             font-style: normal;
             font-weight: normal;
         }
@@ -2016,10 +2017,10 @@
         }
     </script>
     <audio id="show_audio" mu_o_url="somh.ogg" mid="" style="display:none;" autoplay
-        preload="preload" loop="loop"></audio>
+        preload="preload" loop="loop"></audio> 
     <img tag='level2' id="musicPlay" style="z-index:1314533;"
         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpmNzBmYzI1Ni05MTgyLWY4NDYtYjkzNi02MzJiM2QxMDc4OWMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjQzQzE2RUU5MjA1MTFFN0E4ODlDMTA3NjEyQkZBNjgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjQzQzE2RUQ5MjA1MTFFN0E4ODlDMTA3NjEyQkZBNjgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MGE1ZmI5MzctY2EzNS0zNDRlLWIzMDAtMWVlZDFlY2ZkM2ExIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOmY3MGZjMjU2LTkxODItZjg0Ni1iOTM2LTYzMmIzZDEwNzg5YyIv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" />
-    <audio id="pagemusic" style="display:none;" preload="preload" src=""></audio>
+    <!-- <audio id="pagemusic" style="display:none;" preload="preload" src=""></audio> -->
 
     <!-- 礼物说明 -->
     <div tag='level2' id="giftbutton"
@@ -5052,8 +5053,6 @@
         <div class="closeimgbugift"
             ontouchend="$(this).parent().hide();stopPlayTheGifts('theHideGiftIntervalId','#giftdanmucon');event.preventDefault();$('.pageac').attr('class','pageac');">
         </div>
-
-
         <style>
             .gift_paihang {
                 z-index: 5;
@@ -5095,7 +5094,6 @@
                 width: 100%;
                 bottom: 35px;
             }
-
             #giftCon {
                 -webkit-animation: mapcomein 0.3s both;
                 width: 100%;
@@ -5122,7 +5120,6 @@
                 border-radius: 5px;
                 position: relative;
             }
-
             .closeimgbugift {
                 z-index: 1;
                 background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAllBMVEX///8kIyOwsLBLS0s9PT37+/u0tLT19fUrKysnJydDQ0NHR0dJSUklJSU1NTXZ2dlQUFBZWVnBwcHFxcXIyMhAQECZmZm4uLi8vLyKioqbm5vs7OwvLy9VVVWlpaU5OTlXV1ehoaHT09Po6OgyMjI3Nzeenp6oqKirq6vk5OQ8OzvOzs7e3t5/f3+Tk5NhYWFvb28iIiJznQh7AAAAMXRSTlOZ/rPj7JqxnPj76Obk/fKk4Nutq6rqvLCuwruf9t2379y4p6D08Lq2taLtqKPIv9bPXhBALQAAA3RJREFUeNrswQEBAAAAgqD+r26IwAAAAAAAAAAAAICsU19nywkCQRSGW2SQVVEUSYxLEvelKuf9Xy7XPagw5ZTT/Ldu9ZWMHgKymfLIUfvQ6kePkg9yUpGgZ1EyWUZwIRmUO8CipPIBuJBUa8CiZLEBXEjUKunBosTzASeSVQjAnuTUB5xIihSwKKnyCE4kty/AomQ6A+tG7+oPsCgZjTOwInpbfYuSwAcvndDj5EoWOXhfB3qWUIkK+j3+PslB0dNkSn4S8NYVNSVRMh1HmqMcUGPyJHMfvGRKbZImWWzAC7+pXaIkyovBytKA2iZJctVfPDRxyJFUywis2d7onEuRFDNojoLMkiG56vsqLMk0CRLvzr5yn7nkt7avjiQhQ4kK8ow/P14NSERmkksM3lnCdWUuuej7algK+T7MJIGQffWqZLGUsq9ekigvAStLPJJWG8koBW84J3k1SyabCKzzp6Bz3l4y8cGLZZ3ztpLfcQ+s8JOk9kzizbTH0ork9lhyqu0reb9XLSRqnkdgxd8iz3mTZBqD5xckvXuSH31fbUtF4qtLpO+r1pLavlpRN6pJtH117MB1xST320n+/zCQrGXuq2ZJV/aVoSTcU9e6J8lSifcfTeWotQ2oi4XQqzp1zv/Zt6OchKEoCMM/lFrU0po2UKmGKIoEVAz735yp0Qd7jm83F6dhdvCFkNxO5vxkPTcQtT/6d09tf5HR/366/91fDUDS9dQDkKQXyew4BMm6+44agKTrqYcg+doBDEBie+pEUeLsAMYoSt5yZwcgKKn6O4BJmyEo8XtqPcnO66kFJf331SivQFDi7gD0JGljdgCPGYKSV9NTV4CexO2pBSW2p64BPYm7A9CTpOP8aHtqQUl53e+pG0BPUj04e2pBya15X9WAnsTuqVsQlNgdQAOCkl3S76nHIChpbpw9taCknns7AD2JuVe7b1MEJfZerQb0JOY7aroFPYl/ryYoWV9592p6EnOvtllkCEr8ezU9iXuvJihpQ96rWcmKWPlweuqAkiOxsit+v0teMgJKJguipSzMvVowyexAjFjJtIWAks3yiQgxklFeQ0DJ84rIKQvTUweQXL5nxE5ZhL1X6yT7LTFiJfsKCChZcpKUge/VksMdp0nJOed8tgeHBAAAAACC/r/2hBEAAAAAAAAAAACARRR59tksZB0sAAAAAElFTkSuQmCC);
@@ -6463,11 +6460,11 @@
 
 
     function topayview() {
-        window.location.href = "http://h5.hunlihu.com/payhlh/payvs.jsp?app=payshowview&num=1&no=1&target=2067809&sss=LroCLYotLT";
+        //window.location.href = "http://h5.hunlihu.com/payhlh/payvs.jsp?app=payshowview&num=1&no=1&target=2067809&sss=LroCLYotLT";
     }
 
     function topaytanchuang() {
-        window.location.href = "http://h5.hunlihu.com/payhlh/paytanchuang.jsp?app=paytanchuang&num=1&no=1&target=2067809&sss=LroCLYotLT";
+        //window.location.href = "http://h5.hunlihu.com/payhlh/paytanchuang.jsp?app=paytanchuang&num=1&no=1&target=2067809&sss=LroCLYotLT";
     }
     function cloasetanchuang() {
         $("#tcdiv").remove();

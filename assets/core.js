@@ -11,6 +11,8 @@ function initFromInvp(){
 			var musicPlayer = $("#pagemusic")[0];
 			var musicPlay = $("#musicPlay");
 			var audio = $("#show_audio");
+			
+			console.log("musicPlay",musicPlay)
 			if(musicPlay.length>0){
 				var music = audio[0];
 				music.play();
@@ -51,36 +53,41 @@ function initFromInvp(){
 
 
 function initMusic(){
+	console.log("initMusic")
 	var musicPlay = $("#musicPlay");
 	var audio = $("#show_audio");
-	if(musicPlay.length>0){
+
+	if(musicPlay.length>0){  
 		try{
 			var music_url;
 			var show_audio = audio;
 			var mu_o_url = show_audio.attr("mu_o_url");
-			if(mu_o_url.indexOf('--zcl--')>-1){
-				var muArr = mu_o_url.split('--zcl--');
-				music_url = muArr[1];
-				$.ajax({
-			        type: 'get',
-			        url: music_url,
-			        async:false,		//这个是是否异步加载true为异步加载，false则是同步加载
-			        complete: function (res,status) {
-			            if(status!='success'){
-							music_url = OSS_MUSIC_URL_HEAD + muArr[0];
-			            }
-			        }
-			    });
-			}else{
-				if(mu_o_url&&mu_o_url.indexOf("http")!=-1){
-					music_url = mu_o_url;
-				}else if(mu_o_url&&mu_o_url.indexOf("qq--")!=-1){
-					music_url = qqguid;
-				}else{
-					music_url = OSS_MUSIC_URL_HEAD + mu_o_url;
-				}
-			}
-			show_audio.attr("src",music_url);
+
+			// console.log(music_url,show_audio,mu_o_url)
+			// if(mu_o_url.indexOf('--zcl--')>-1){
+			// 	var muArr = mu_o_url.split('--zcl--');
+			// 	music_url = muArr[1];
+			// 	console.log("music_url",music_url)
+			// 	$.ajax({
+			//         type: 'get',
+			//         url: music_url,
+			//         async:false,		//这个是是否异步加载true为异步加载，false则是同步加载
+			//         complete: function (res,status) {
+			//             if(status!='success'){
+			// 				music_url = OSS_MUSIC_URL_HEAD + muArr[0];
+			//             }
+			//         }
+			//     });
+			// }else{
+			// 	if(mu_o_url&&mu_o_url.indexOf("http")!=-1){
+			// 		music_url = mu_o_url;
+			// 	}else if(mu_o_url&&mu_o_url.indexOf("qq--")!=-1){
+			// 		music_url = qqguid;
+			// 	}else{
+			// 		music_url = OSS_MUSIC_URL_HEAD + mu_o_url;
+			// 	}
+			// }
+			show_audio.attr("src",OSS_MUSIC_URL_HEAD + mu_o_url);
 		}catch(e){
 			console.log(e);
 		}
