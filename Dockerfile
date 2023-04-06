@@ -10,4 +10,4 @@ COPY . /usr/share/nginx/html/
 # COPY nginx.conf /etc/nginx/nginx.conf
 
 # 开启容器的 80 端口
-EXPOSE 80
+EXPOSE 8080
