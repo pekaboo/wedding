@@ -1,4 +1,5 @@
 
+git pull origin main
 docker stop my-nginx-container && docker rm my-nginx-container
 docker rmi my-nginx-image
 docker build -t my-nginx-image .
