@@ -109,8 +109,8 @@ function initMusic(){
 	}else{
 
 
-		initMusicByHo(musicPlay,audio);
-		return ;
+		// initMusicByHo(musicPlay,audio);
+		// return ;
 		var isWechat = theAgent.toLowerCase().indexOf('micromessenger') != -1;
 		if(!isWechat){
 			console.log("!isWechat:")
