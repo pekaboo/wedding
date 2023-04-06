@@ -7,7 +7,7 @@ RUN mkdir -p /usr/share/nginx/html/
 COPY . /usr/share/nginx/html/
 
 # 将自定义的 Nginx 配置文件拷贝到容器中
-COPY nginx.conf /etc/nginx/nginx.conf
+# COPY nginx.conf /etc/nginx/nginx.conf
 
 # 开启容器的 80 端口
 EXPOSE 80
