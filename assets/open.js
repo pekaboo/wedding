@@ -202,7 +202,7 @@ jQuery.fn.kiss = function(data,callBack){
 };
 
 jQuery.fn.zCustomer = function(callBack,type){
-	var con = $("<div style=\"z-index:2147483644;width:"+screenWidth+"px;height:"+screenHeight+"px;position:fixed;top:0px;left:0px;background:none;\" align='center'></div>").prependTo(this);
+	var con = $("<div id='touchthis' style=\"z-index:2147483644;width:"+screenWidth+"px;height:"+screenHeight+"px;position:fixed;top:0px;left:0px;background:none;\" align='center'></div>").prependTo(this);
 	con.customer(callBack,type);
 };
 var colorArr = new Array("","","#ECC47D","#FFFDFF","#FFFDFF","#FFFDFF","#EEAE45","#FFFDFF","#BCA480","#A14145","#FFFDFF","#BAA47F","#FFFDFF","#655077","#88624B");
@@ -213,7 +213,7 @@ jQuery.fn.customer = function(callBack,type){
 	var div ="<div class='cdown customer_1'><img src='https://s.hunlihu.com/customer-open/customer"+type+"_1.jpg' style='width:100%;'/></div>"+
 			 "<div class='cup customer_2'><img src='https://s.hunlihu.com/customer-open/customer"+type+"_2.png' style='width:100%;'/></div>"+
 			 "<div class='cup customer_n' style='color:"+colorArr[type]+";'>"+keren+"</div>"+
-			 "<div id='touchthis' class='cup customer_3' style='top:"+top+"'><img src='https://s.hunlihu.com/customer-open/customer"+type+"_3.png' style='width:140px;'/></div>";
+			 "<div  class='cup customer_3' style='top:"+top+"'><img src='https://s.hunlihu.com/customer-open/customer"+type+"_3.png' style='width:140px;'/></div>";
 	$(div).appendTo(con);
 	//810,640
 	var device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
@@ -225,6 +225,7 @@ jQuery.fn.customer = function(callBack,type){
     		callBack();
     		setTimeout(function(){con.remove();},980);
     	}
+
     },false);
 };
 
