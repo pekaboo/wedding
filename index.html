@@ -4467,7 +4467,7 @@
                             <option value="0">待定</option>
                         </select><span>出席人数</span></td>
                 </tr>
-            </table> 
+            </table> -->
             <input an_time="" controlled="an" id="andm_649868" class="dm" input_box_name="d_submit"
                 should_sign="0" style="z-index:26;opacity:1;transform:rotate(0deg);-webkit-appearance:none;"
                 onclick="send_data(this)" value="提交" type="button" smaterial_id="649868" sm_type="input"
@@ -4481,7 +4481,7 @@
                 st_input_align="1" st_video_auto="" st_video_img_url="" st_video_mp4_url="" click_an_start_smid=""
                 click_an_start_state="0" auto_bili="0" an_use="99"
                 an_text="[{'an_detail':'1.5s ease 0s 1','an_id':'','an_use':'0'},{'an_detail':'1.5s ease 0s 1','an_id':'','an_use':'0'},{'an_detail':'1.5s ease 0s 1','an_id':'','an_use':'0'}]" /><a
-                class="thecallphone" href="tel:13377825941">-->
+                class="thecallphone" href="tel:13377825941">
                 <div an_time="" controlled="an" id="andm_649869" class="dm"
                     style="z-index:80;opacity:1;transform:rotate(0deg);" smaterial_id="649869" sm_type="img"
                     css_background_color="rgba(255,255,255,0)" css_width="36" css_height="36" css_margin_top="8588"
@@ -6517,15 +6517,15 @@
         $('body').append(dzanimationh);
 
         var num = $(dom).find("#dianzan_no").html();
-        if (num == '99+' || num == '99') {
-            num = '99+'
-        } else {
+        //if (num == '99+' || num == '99') {
+        //    num = '99+'
+        //} else {
             if (!num) {
                 num = 1;
             } else {
                 num = parseInt(num) + 1;
             }
-        }
+        //}
 
         $(dom).find("#dianzan_no").html(num);
         $(dom).find("#dianzan_no").css('opacity', 1);
