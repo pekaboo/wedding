@@ -3,6 +3,6 @@
     "staticrypt": "^3.3.2"
   },
   "scripts": {
-    "c": "staticrypt index-.html index.html -p 'juan' --short --template-title 'Wedding123' --template-instructions '你是11？' --template-color-primary '#bb1a24' --template-button '#bb1a24' "
+    "c": "staticrypt  index-.html --o 1.html -d './' -p 'juan' --short --template-title 'Wedding123' --template-instructions '你是？' --template-color-primary '#bb1a24' --template-button '#bb1a24'"
   }
 }
